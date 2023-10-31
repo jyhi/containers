@@ -10,5 +10,5 @@ rm -rf /var/lib/apt/lists/*
 LABEL \
 org.opencontainers.image.title="GNAT-FSF (Debian)" \
 org.opencontainers.image.description="The GNU Ada compiler shipped with Debian." \
-org.opencontainers.image.source="https://github.com/jyhi/containers/blob/main/gnat-fsf-debian.containerfile" \
+org.opencontainers.image.source="https://github.com/jyhi/containers" \
 org.opencontainers.image.authors="Junde Yhi <junde@yhi.moe>"
