@@ -34,7 +34,7 @@ FROM debian:12
 COPY --from=downloads /opt /opt
 
 # Add the tools to $PATH.
-ENV PATH="/opt/gnat-x86_64-linux-${GNAT_VER}/bin:/opt/gnatprove-x86_64-linux-${GNATPROVE_VER}/bin:/opt/alire-x86_64-linux-1.2.2/bin:$PATH"
+ENV PATH="/opt/gnat-x86_64-linux-${GNAT_VER}/bin:/opt/gnatprove-x86_64-linux-${GNATPROVE_VER}/bin:/opt/alire-x86_64-linux-${ALIRE_VER}/bin:$PATH"
 
 # Alire adjustments. Alire depends on cURL and Git to download packages.
 RUN apt-get update && apt-get install -y curl git && rm -rf /var/lib/apt/lists/*
