@@ -1,0 +1,34 @@
+<!--
+  SPDX-FileCopyrightText: 2024 Junde Yhi <junde@yhi.moe>
+  SPDX-License-Identifier: CC0-1.0
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.intel.QuartusPrime.Lite</id>
+  <name>Quartus Prime Lite Edition</name>
+  <summary>Intel® Quartus® Prime Lite Edition Design Software for Linux</summary>
+  <categories>
+    <category>Development</category>
+    <category>Electronics</category>
+  </categories>
+  <developer id="com.intel">
+    <name>Intel Corporation</name>
+  </developer>
+  <url type="homepage">https://www.intel.com/content/www/us/en/products/details/fpga/development-tools/quartus-prime.html</url>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-QuartusPrime</project_license>
+  <description>
+    <p>
+      Intel® Quartus® Prime Software enables a fast path to turning Intel® FPGA, SoC, and CPLD designs into reality. It
+      provides tools and features needed to help with every step from design entry and synthesis to optimization,
+      verification, and simulation.
+    </p>
+  </description>
+  <launchable type="desktop-id">com.intel.QuartusPrime.Lite.desktop</launchable>
+  <releases>
+    <release version="23.1" date="2023-12-11">
+      <url>https://www.intel.com/content/www/us/en/software-kit/795187/intel-quartus-prime-lite-edition-design-software-version-23-1-for-linux.html</url>
+    </release>
+  </releases>
+</component>
