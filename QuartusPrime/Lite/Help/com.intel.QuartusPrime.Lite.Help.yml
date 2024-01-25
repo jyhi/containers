@@ -1,0 +1,33 @@
+# SPDX-FileCopyrightText: 2024 Junde Yhi <junde@yhi.moe>
+# SPDX-License-Identifier: CC0-1.0
+
+id: com.intel.QuartusPrime.Lite.Help
+runtime: com.intel.QuartusPrime.Lite
+sdk: org.freedesktop.Sdk//23.08
+build-extension: true
+appstream-compose: false # see below
+modules:
+  - name: install
+    buildsystem: simple
+    build-commands:
+      - chmod u+x QuartusHelpSetup-23.1std.0.991-linux.run
+      - ./QuartusHelpSetup-23.1std.0.991-linux.run --mode unattended --installdir ./intelFPGA_lite/23.1std --product_copy_name Flatpak --accept_eula 1
+      - cp -r ./intelFPGA_lite/23.1std/quartus/common/help/* $FLATPAK_DEST
+    sources:
+      - type: file
+        path: QuartusHelpSetup-23.1std.0.991-linux.run
+        # SHA-1 is taken from the Intel website; SHA-256 is provided as well.
+        sha1: 33716a5c1372402e2b96681ba748d4cb231fdfb2
+        sha256: 2706d9a55f45d364e75486fdef14b64bd3b64d85eb669c195b73ab8b8e404af2
+
+  - name: install-metadata
+    buildsystem: simple
+    build-commands:
+      - mkdir -p $FLATPAK_DEST/share/metainfo
+      - cp com.intel.QuartusPrime.Lite.Help.metainfo.xml $FLATPAK_DEST/share/metainfo
+      # Run appstream-compose manually to fix the hard-coded, incorrect prefix for extensions.
+      # See: <https://github.com/flatpak/flatpak-builder/issues/368>
+      - appstream-compose --prefix=$FLATPAK_DEST --origin=flatpak --basename=com.intel.QuartusPrime.Lite.Help com.intel.QuartusPrime.Lite.Help
+    sources:
+      - type: file
+        path: com.intel.QuartusPrime.Lite.Help.metainfo.xml
