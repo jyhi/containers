@@ -3,4 +3,6 @@
 
 build/
 .flatpak-builder/
-Lite/QuartusLiteSetup-23.1std.0.991-linux.run
+*.run
+*.qdz
+*.tar.xz
