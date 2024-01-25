@@ -1,0 +1,26 @@
+<!--
+  SPDX-FileCopyrightText: 2024 Junde Yhi <junde@yhi.moe>
+  SPDX-License-Identifier: CC0-1.0
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="addon">
+  <id>com.intel.QuartusPrime.Lite.Device.CycloneV</id>
+  <extends>com.intel.QuartusPrime.Lite</extends>
+  <name>Cyclone V Device Support</name>
+  <summary>Intel Cyclone V device support for Quartus Prime Lite Edition</summary>
+  <categories>
+    <category>Development</category>
+    <category>Electronics</category>
+  </categories>
+  <developer id="intel.com">
+    <name>Intel Corporation</name>
+  </developer>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-QuartusPrime</project_license>
+  <releases>
+    <release version="23.1" date="2023-12-11">
+      <url>https://www.intel.com/content/www/us/en/software-kit/795187/intel-quartus-prime-lite-edition-design-software-version-23-1-for-linux.html</url>
+    </release>
+  </releases>
+</component>
