@@ -2,14 +2,37 @@
 # SPDX-License-Identifier: CC0-1.0
 
 id: com.intel.QuartusPrime.Lite
-runtime: org.freedesktop.Platform
-runtime-version: '23.08'
-sdk: org.freedesktop.Sdk
+runtime: org.freedesktop.Platform//23.08
+sdk: org.freedesktop.Sdk//23.08
+add-extensions:
+  com.intel.QuartusPrime.Lite.Device:
+    # Note: devinfo has other files, so we cannot use it as an extension mount point. Device support packs can contain
+    # multiple models, so they cannot be mounted to a single point. The way to resolve this is to define an extension
+    # point in a separate mounting point, then create soft links pointing into folders in the extension. For example,
+    # com.intel.QuartusPrime.Lite.Device.Max10 with the following configuration will be automatically identified as an
+    # extension of this Flatpak and mounted to /app/opt/intelFPGA_lite/23.1std/quartus/common/devinfo/.flatpak/Max10.
+    # The post-install step below creates soft link pointing into this folder, so that (when extension is installed)
+    # the device support appears in the right place.
+    directory: opt/intelFPGA_lite/23.1std/quartus/common/devinfo/.flatpak
+    subdirectories: true
+    no-autodownload: false
+    autodelete: true
+  com.intel.QuartusPrime.Lite.Help:
+    directory: opt/intelFPGA_lite/23.1std/quartus/common/help
+    no-autodownload: false
+    autodelete: true
+  com.intel.QuartusPrime.Questa.Starter:
+    directory: opt/intelFPGA_lite/23.1std/questa_fse
+    no-autodownload: false
+    autodelete: true
+  com.intel.QuartusPrime.RiscFree:
+    directory: opt/intelFPGA_lite/23.1std/riscfree
+    no-autodownload: false
+    autodelete: true
 finish-args:
   - --socket=x11
   - --share=ipc
-  - --device=all
-  - --filesystem=home
+  - --env=QSYS_ROOTDIR=/app/opt/intelFPGA_lite/23.1std/quartus/sopc_builder/bin
 command: /app/opt/intelFPGA_lite/23.1std/quartus/bin/quartus
 modules:
   # Supplement libcrypt.so.1, which is still required by the software.
@@ -23,6 +46,7 @@ modules:
       - --disable-failure-tokens
     sources:
       - type: archive
+        path: libxcrypt-4.4.36.tar.xz
         url: https://github.com/besser82/libxcrypt/releases/download/v4.4.36/libxcrypt-4.4.36.tar.xz
         sha256: e5e1f4caee0a01de2aee26e3138807d6d3ca2b8e67287966d1fefd65e1fd8943
 
@@ -37,12 +61,12 @@ modules:
         contents: |
           /app/lib
 
-  # Run the installer for Quartus(R) Prime (includes Nios II EDS).
+  # Run the installer for Quartus Prime (includes Nios II EDS).
   - name: quartus-prime-lite
     buildsystem: simple
     build-commands:
       - chmod u+x QuartusLiteSetup-23.1std.0.991-linux.run
-      - ./QuartusLiteSetup-23.1std.0.991-linux.run --mode unattended --installdir /app/opt/intelFPGA_lite/23.1std --accept_eula 1
+      - ./QuartusLiteSetup-23.1std.0.991-linux.run --mode unattended --disable-components quartus_help,devinfo,arria_lite,cyclone,cyclone10lp,cyclonev,max,max10,quartus_update,riscfree,questa_fse,questa_fe --installdir /app/opt/intelFPGA_lite/23.1std --product_copy_name Flatpak --accept_eula 1
       # Fix permissions of the extracted files and folders to allow the build process to carry on...
       - chmod --recursive u+w,g-s /app/opt/intelFPGA_lite
     sources:
@@ -52,16 +76,33 @@ modules:
         sha1: 7f8cc416092710c47270ef1550a0d0bc2bfb7a10
         sha256: 10a5dfe96433b66562ffae352f1bd274a5f24dd2fedfaddb3c80bc6cca6ae4d5
 
-  # Add AppStream data, application icon, and desktop entry.
-  - name: metadata
+  # Do various post-installation work. Separated from the last step because we want it to be kept cached.
+  - name: post-install
     buildsystem: simple
     build-commands:
-      - mkdir -p /app/share/metainfo/
-      - cp com.intel.QuartusPrime.Lite.metainfo.xml /app/share/metainfo/
-      - mkdir -p /app/share/icons/hicolor/64x64/apps/
+      # Remove unnecessary files. This however creates an extra dialog during application startup.
+      - rm -fr /app/opt/intelFPGA_lite/23.1std/{logs,uninstall}
+      # Create extension mounting points (otherwise extensions would fail to install).
+      - mkdir -p /app/opt/intelFPGA_lite/23.1std/quartus/common/devinfo/.flatpak
+      - mkdir -p /app/opt/intelFPGA_lite/23.1std/quartus/common/help
+      - mkdir -p /app/opt/intelFPGA_lite/23.1std/questa_fse
+      - mkdir -p /app/opt/intelFPGA_lite/23.1std/riscfree
+      # For device support, set up soft links pointing to the subdirectories.
+      - ln -s .flatpak/Arria/arriaii /app/opt/intelFPGA_lite/23.1std/quartus/common/devinfo/arriaii
+      - ln -s .flatpak/Cyclone10LP/cyclone10lp /app/opt/intelFPGA_lite/23.1std/quartus/common/devinfo/cyclone10lp
+      - ln -s .flatpak/Cyclone/cycloneive /app/opt/intelFPGA_lite/23.1std/quartus/common/devinfo/cycloneive
+      - ln -s .flatpak/Cyclone/cycloneivgx /app/opt/intelFPGA_lite/23.1std/quartus/common/devinfo/cycloneivgx
+      - ln -s .flatpak/CycloneV/cyclonev /app/opt/intelFPGA_lite/23.1std/quartus/common/devinfo/cyclonev
+      - ln -s .flatpak/Max10/55nm /app/opt/intelFPGA_lite/23.1std/quartus/common/devinfo/55nm
+      - ln -s .flatpak/Max/maxii /app/opt/intelFPGA_lite/23.1std/quartus/common/devinfo/maxii
+      - ln -s .flatpak/Max/maxv /app/opt/intelFPGA_lite/23.1std/quartus/common/devinfo/maxv
+      # Add AppStream data, application icon, and desktop entry.
+      - mkdir -p /app/share/metainfo
+      - cp com.intel.QuartusPrime.Lite.metainfo.xml /app/share/metainfo
+      - mkdir -p /app/share/icons/hicolor/64x64/apps
       - cp /app/opt/intelFPGA_lite/23.1std/quartus/adm/quartusii.png /app/share/icons/hicolor/64x64/apps/com.intel.QuartusPrime.Lite.png
-      - mkdir -p /app/share/applications/
-      - cp com.intel.QuartusPrime.Lite.desktop /app/share/applications/
+      - mkdir -p /app/share/applications
+      - cp com.intel.QuartusPrime.Lite.desktop /app/share/applications
     sources:
       - type: file
         path: com.intel.QuartusPrime.Lite.metainfo.xml

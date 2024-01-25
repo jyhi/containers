@@ -5,7 +5,7 @@
 Version=1.0
 Type=Application
 Name=Quartus Prime Lite Edition
-Comment=Intel® Quartus® Prime Lite Edition Design Software for Linux
+Comment=Intel Quartus Prime Lite Edition Design Software for Linux
 Categories=Development;Electronics;
 Icon=com.intel.QuartusPrime.Lite
 Exec=

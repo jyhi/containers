@@ -7,18 +7,24 @@
 <component type="desktop-application">
   <id>com.intel.QuartusPrime.Lite</id>
   <name>Quartus Prime Lite Edition</name>
-  <summary>Intel® Quartus® Prime Lite Edition Design Software for Linux</summary>
+  <summary>Intel Quartus Prime Lite Edition Design Software for Linux</summary>
   <categories>
     <category>Development</category>
     <category>Electronics</category>
   </categories>
-  <developer id="com.intel">
+  <developer id="intel.com">
     <name>Intel Corporation</name>
   </developer>
   <url type="homepage">https://www.intel.com/content/www/us/en/products/details/fpga/development-tools/quartus-prime.html</url>
+  <url type="help">https://www.intel.com/content/www/us/en/support/programmable/support-resources/design-software/user-guides.html</url>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-QuartusPrime</project_license>
   <description>
+    <p>
+      The intuitive high-performance design environment. From design entry and synthesis to optimization, verification,
+      and simulation, Intel® Quartus® Prime Design Software unlocks increased capabilities on devices with multi-million
+      logic elements, providing designers with the ideal platform to meet next-generation design opportunities.
+    </p>
     <p>
       Intel® Quartus® Prime Software enables a fast path to turning Intel® FPGA, SoC, and CPLD designs into reality. It
       provides tools and features needed to help with every step from design entry and synthesis to optimization,
