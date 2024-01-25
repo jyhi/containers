@@ -1,0 +1,33 @@
+# SPDX-FileCopyrightText: 2024 Junde Yhi <junde@yhi.moe>
+# SPDX-License-Identifier: CC0-1.0
+
+id: com.intel.QuartusPrime.Lite.Device.Cyclone10LP
+runtime: com.intel.QuartusPrime.Lite
+sdk: org.freedesktop.Sdk//23.08
+build-extension: true
+appstream-compose: false # see below
+modules:
+  - name: install
+    buildsystem: simple
+    build-commands:
+      - cp -r cyclone10lp $FLATPAK_DEST
+    sources:
+      - type: archive
+        archive-type: zip
+        strip-components: 3 # quartus/common/devinfo
+        path: cyclone10lp-23.1std.0.991.qdz
+        # SHA-1 is taken from the Intel website; SHA-256 is provided as well.
+        sha1: 72b1b9a18dc28f26604522d3b3e14e29ecdfdb4c
+        sha256: b2e796c4bcef71bbc4cb0e5c0e9709640faf6685bbd3384f34103c0943a852ce
+
+  - name: install-metadata
+    buildsystem: simple
+    build-commands:
+      - mkdir -p $FLATPAK_DEST/share/metainfo
+      - cp com.intel.QuartusPrime.Lite.Device.Cyclone10LP.metainfo.xml $FLATPAK_DEST/share/metainfo
+      # Run appstream-compose manually to fix the hard-coded, incorrect prefix for extensions.
+      # See: <https://github.com/flatpak/flatpak-builder/issues/368>
+      - appstream-compose --prefix=$FLATPAK_DEST --origin=flatpak --basename=com.intel.QuartusPrime.Lite.Device.Cyclone10LP com.intel.QuartusPrime.Lite.Device.Cyclone10LP
+    sources:
+      - type: file
+        path: com.intel.QuartusPrime.Lite.Device.Cyclone10LP.metainfo.xml
