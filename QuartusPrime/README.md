@@ -23,10 +23,10 @@ Replace `com.example.Manifest.yml` with the name of manifest file describing the
   - Quartus® Prime (includes Nios II EDS): [com.intel.QuartusPrime.Lite](./Lite/com.intel.QuartusPrime.Lite.yml)
   - Questa - Intel® FPGA and Starter Editions: com.intel.QuartusPrime.Questa.Starter (work in progress)
 - Devices
-  - Arria® II device support: com.intel.QuartusPrime.Lite.Device.ArriaLite (work in progress)
-  - Cyclone® IV device support: com.intel.QuartusPrime.Lite.Device.Cyclone (work in progress)
-  - Cyclone® 10 LP device support: com.intel.QuartusPrime.Lite.Device.Cyclone10LP (work in progress)
-  - Cyclone® V device support: com.intel.QuartusPrime.Lite.Device.CycloneV (work in progress)
+  - Arria® II device support: [com.intel.QuartusPrime.Lite.Device.ArriaLite](./Lite/Device/ArriaLite/com.intel.QuartusPrime.Lite.Device.ArriaLite.yml)
+  - Cyclone® IV device support: [com.intel.QuartusPrime.Lite.Device.Cyclone](./Lite/Device/Cyclone/com.intel.QuartusPrime.Lite.Device.Cyclone.yml)
+  - Cyclone® 10 LP device support: [com.intel.QuartusPrime.Lite.Device.Cyclone10LP](./Lite/Device/Cyclone10LP/com.intel.QuartusPrime.Lite.Device.Cyclone10LP.yml)
+  - Cyclone® V device support: [com.intel.QuartusPrime.Lite.Device.CycloneV](./Lite/Device/CycloneV/com.intel.QuartusPrime.Lite.Device.CycloneV.yml)
   - MAX® II, MAX® V device support: [com.intel.QuartusPrime.Lite.Device.Max](./Lite/Device/Max/com.intel.QuartusPrime.Lite.Device.Max.yml)
   - MAX® 10 FPGA device support: [com.intel.QuartusPrime.Lite.Device.Max10](./Lite/Device/Max10/com.intel.QuartusPrime.Lite.Device.Max10.yml)
 - Add-On Software
