@@ -1,0 +1,33 @@
+# SPDX-FileCopyrightText: 2024 Junde Yhi <junde@yhi.moe>
+# SPDX-License-Identifier: CC0-1.0
+
+id: com.intel.QuartusPrime.Lite.Device.ArriaLite
+runtime: com.intel.QuartusPrime.Lite
+sdk: org.freedesktop.Sdk//23.08
+build-extension: true
+appstream-compose: false # see below
+modules:
+  - name: install
+    buildsystem: simple
+    build-commands:
+      - cp -r arriaii $FLATPAK_DEST
+    sources:
+      - type: archive
+        archive-type: zip
+        strip-components: 3 # quartus/common/devinfo
+        path: arria_lite-23.1std.0.991.qdz
+        # SHA-1 is taken from the Intel website; SHA-256 is provided as well.
+        sha1: 9481182af9eb308e606a31f91add38a9014cb4a5
+        sha256: 147fd4acf9db182cbde067d347e6b0f0bab75faeafc3c156ad1badc56cade939
+
+  - name: install-metadata
+    buildsystem: simple
+    build-commands:
+      - mkdir -p $FLATPAK_DEST/share/metainfo
+      - cp com.intel.QuartusPrime.Lite.Device.ArriaLite.metainfo.xml $FLATPAK_DEST/share/metainfo
+      # Run appstream-compose manually to fix the hard-coded, incorrect prefix for extensions.
+      # See: <https://github.com/flatpak/flatpak-builder/issues/368>
+      - appstream-compose --prefix=$FLATPAK_DEST --origin=flatpak --basename=com.intel.QuartusPrime.Lite.Device.ArriaLite com.intel.QuartusPrime.Lite.Device.ArriaLite
+    sources:
+      - type: file
+        path: com.intel.QuartusPrime.Lite.Device.ArriaLite.metainfo.xml
