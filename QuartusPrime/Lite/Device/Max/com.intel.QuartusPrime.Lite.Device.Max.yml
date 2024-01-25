@@ -1,0 +1,33 @@
+# SPDX-FileCopyrightText: 2024 Junde Yhi <junde@yhi.moe>
+# SPDX-License-Identifier: CC0-1.0
+
+id: com.intel.QuartusPrime.Lite.Device.Max
+runtime: com.intel.QuartusPrime.Lite
+sdk: org.freedesktop.Sdk//23.08
+build-extension: true
+appstream-compose: false # see below
+modules:
+  - name: install
+    buildsystem: simple
+    build-commands:
+      - cp -r maxii maxv $FLATPAK_DEST
+    sources:
+      - type: archive
+        archive-type: zip
+        strip-components: 3 # quartus/common/devinfo
+        path: max-23.1std.0.991.qdz
+        # SHA-1 is taken from the Intel website; SHA-256 is provided as well.
+        sha1: e1761953d705c706e6700812ba3ccbe67f52abce
+        sha256: 6b3d48f94da03e9deead81d112fc6615e979346e106a1d738c5f5a3cfeff5a13
+
+  - name: install-metadata
+    buildsystem: simple
+    build-commands:
+      - mkdir -p $FLATPAK_DEST/share/metainfo
+      - cp com.intel.QuartusPrime.Lite.Device.Max.metainfo.xml $FLATPAK_DEST/share/metainfo
+      # Run appstream-compose manually to fix the hard-coded, incorrect prefix for extensions.
+      # See: <https://github.com/flatpak/flatpak-builder/issues/368>
+      - appstream-compose --prefix=$FLATPAK_DEST --origin=flatpak --basename=com.intel.QuartusPrime.Lite.Device.Max com.intel.QuartusPrime.Lite.Device.Max
+    sources:
+      - type: file
+        path: com.intel.QuartusPrime.Lite.Device.Max.metainfo.xml
