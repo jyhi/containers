@@ -1,0 +1,36 @@
+<!--
+  SPDX-FileCopyrightText: 2024 Junde Yhi <junde@yhi.moe>
+  SPDX-License-Identifier: CC0-1.0
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.intel.QuartusPrime.Programmer</id>
+  <name>Quartus Prime Programmer</name>
+  <summary>Stand-Alone Intel Quartus Prime Programmer</summary>
+  <categories>
+    <category>Development</category>
+    <category>Electronics</category>
+  </categories>
+  <developer id="intel.com">
+    <name>Intel Corporation</name>
+  </developer>
+  <url type="homepage">https://www.intel.com/content/www/us/en/products/details/fpga/development-tools/quartus-prime.html</url>
+  <url type="help">https://www.intel.com/content/www/us/en/support/programmable/support-resources/design-software/user-guides.html</url>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-QuartusPrime</project_license>
+  <description>
+    <p>
+      Intel FPGA offers the free stand-alone Programmer, which has the same full functionality as the Intel® Quartus®
+      Prime Programmer in the Intel® Quartus® Prime software. The stand-alone Programmer is useful when programming your
+      devices with another workstation, so you do not need two full licenses. You can download the stand-alone
+      Programmer from the Download Center on the Altera website.
+    </p>
+  </description>
+  <launchable type="desktop-id">com.intel.QuartusPrime.Programmer.desktop</launchable>
+  <releases>
+    <release version="23.1" date="2023-12-11">
+      <url>https://www.intel.com/content/www/us/en/software-kit/795187/intel-quartus-prime-lite-edition-design-software-version-23-1-for-linux.html</url>
+    </release>
+  </releases>
+</component>
