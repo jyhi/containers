@@ -21,7 +21,7 @@ add-extensions:
     directory: opt/intelFPGA_lite/23.1std/quartus/common/help
     no-autodownload: false
     autodelete: true
-  com.intel.QuartusPrime.Questa.Starter:
+  com.intel.QuartusPrime.Lite.Questa.Starter:
     directory: opt/intelFPGA_lite/23.1std/questa_fse
     no-autodownload: false
     autodelete: true

@@ -21,7 +21,7 @@ Replace `com.example.Manifest.yml` with the name of manifest file describing the
 
 - Intel® Quartus® Software
   - Quartus® Prime (includes Nios II EDS): [com.intel.QuartusPrime.Lite](./Lite/com.intel.QuartusPrime.Lite.yml)
-  - Questa - Intel® FPGA and Starter Editions: [com.intel.QuartusPrime.Questa.Starter](./Questa/Starter/com.intel.QuartusPrime.Questa.Starter.yml)
+  - Questa - Intel® FPGA Starter Editions: [com.intel.QuartusPrime.Lite.Questa.Starter](./Lite/Questa/Starter/com.intel.QuartusPrime.Questa.Starter.yml)
 - Devices
   - Arria® II device support: [com.intel.QuartusPrime.Lite.Device.ArriaLite](./Lite/Device/ArriaLite/com.intel.QuartusPrime.Lite.Device.ArriaLite.yml)
   - Cyclone® IV device support: [com.intel.QuartusPrime.Lite.Device.Cyclone](./Lite/Device/Cyclone/com.intel.QuartusPrime.Lite.Device.Cyclone.yml)

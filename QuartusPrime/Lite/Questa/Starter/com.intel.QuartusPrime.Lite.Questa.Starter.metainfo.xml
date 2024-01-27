@@ -5,9 +5,9 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="addon">
-  <id>com.intel.QuartusPrime.Questa.Starter</id>
+  <id>com.intel.QuartusPrime.Lite.Questa.Starter</id>
   <extends>com.intel.QuartusPrime.Lite</extends>
-  <name>Help Resources for Quartus Prime Lite Edition</name>
+  <name>Siemens EDA Questa Core for Intel FPGAs</name>
   <categories>
     <category>Development</category>
     <category>Electronics</category>
@@ -15,6 +15,8 @@
   <developer id="intel.com">
     <name>Intel Corporation</name>
   </developer>
+  <url type="homepage">https://www.intel.com/content/www/us/en/software/programmable/quartus-prime/questa-edition.html</url>
+  <url type="help">https://www.intel.com/content/www/us/en/docs/programmable/691278/21-3/quick-start.html</url>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-QuartusPrime</project_license>
   <releases>
