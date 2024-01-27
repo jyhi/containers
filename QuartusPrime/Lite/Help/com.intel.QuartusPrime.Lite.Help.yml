@@ -16,7 +16,8 @@ modules:
     sources:
       - type: file
         path: QuartusHelpSetup-23.1std.0.991-linux.run
-        # SHA-1 is taken from the Intel website; SHA-256 is provided as well.
+        # SHA-1 is taken from the Intel website; SHA-256 is provided as well. However, flatpak-builder doesn't check a
+        # locally provided file anyway, so they're only for reference.
         sha1: 33716a5c1372402e2b96681ba748d4cb231fdfb2
         sha256: 2706d9a55f45d364e75486fdef14b64bd3b64d85eb669c195b73ab8b8e404af2
 

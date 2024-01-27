@@ -16,7 +16,8 @@ modules:
         archive-type: zip
         strip-components: 3 # quartus/common/devinfo
         path: arria_lite-23.1std.0.991.qdz
-        # SHA-1 is taken from the Intel website; SHA-256 is provided as well.
+        # SHA-1 is taken from the Intel website; SHA-256 is provided as well. However, flatpak-builder doesn't check a
+        # locally provided file anyway, so they're only for reference.
         sha1: 9481182af9eb308e606a31f91add38a9014cb4a5
         sha256: 147fd4acf9db182cbde067d347e6b0f0bab75faeafc3c156ad1badc56cade939
 

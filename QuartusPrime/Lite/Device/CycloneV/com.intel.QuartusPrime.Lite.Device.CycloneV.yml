@@ -16,7 +16,8 @@ modules:
         archive-type: zip
         strip-components: 3 # quartus/common/devinfo
         path: cyclonev-23.1std.0.991.qdz
-        # SHA-1 is taken from the Intel website; SHA-256 is provided as well.
+        # SHA-1 is taken from the Intel website; SHA-256 is provided as well. However, flatpak-builder doesn't check a
+        # locally provided file anyway, so they're only for reference.
         sha1: 8c08c3c2f8c54ef756ebf1a04f8da74f748009bb
         sha256: efbcd05ebe521491fa6720a6385798e5a000a18e8d41f8351d1c3b0f31126983
 

@@ -16,7 +16,8 @@ modules:
     sources:
       - type: file
         path: QuestaSetup-23.1std.0.991-linux.run
-        # SHA-1 is taken from the Intel website; SHA-256 is provided as well.
+        # SHA-1 is taken from the Intel website; SHA-256 is provided as well. However, flatpak-builder doesn't check a
+        # locally provided file anyway, so they're only for reference.
         sha1: a62f877e759b9bcd636404531376b33f163443b8
         sha256: b347019f751cab6ff934e12198fe29834a141c8e64cde1a28cc46d32e1f53439
 

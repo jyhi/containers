@@ -16,7 +16,8 @@ modules:
         archive-type: zip
         strip-components: 3 # quartus/common/devinfo
         path: max10-23.1std.0.991.qdz
-        # SHA-1 is taken from the Intel website; SHA-256 is provided as well.
+        # SHA-1 is taken from the Intel website; SHA-256 is provided as well. However, flatpak-builder doesn't check a
+        # locally provided file anyway, so they're only for reference.
         sha1: 80109b586c8a8a4b68b319accb03ede4ef39a0a0
         sha256: e224707e0f1ed57ed939c24c4dfa4e61abd8990f742e0a8bbba4b77f0ec11437
 

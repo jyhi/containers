@@ -46,7 +46,6 @@ modules:
       - --disable-failure-tokens
     sources:
       - type: archive
-        path: libxcrypt-4.4.36.tar.xz
         url: https://github.com/besser82/libxcrypt/releases/download/v4.4.36/libxcrypt-4.4.36.tar.xz
         sha256: e5e1f4caee0a01de2aee26e3138807d6d3ca2b8e67287966d1fefd65e1fd8943
 
@@ -72,7 +71,8 @@ modules:
     sources:
       - type: file
         path: QuartusLiteSetup-23.1std.0.991-linux.run
-        # SHA-1 is taken from the Intel website; SHA-256 is provided as well.
+        # SHA-1 is taken from the Intel website; SHA-256 is provided as well. However, flatpak-builder doesn't check a
+        # locally provided file anyway, so they're only for reference.
         sha1: 7f8cc416092710c47270ef1550a0d0bc2bfb7a10
         sha256: 10a5dfe96433b66562ffae352f1bd274a5f24dd2fedfaddb3c80bc6cca6ae4d5
 
