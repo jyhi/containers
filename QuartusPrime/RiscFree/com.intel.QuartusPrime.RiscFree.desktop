@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2024 Junde Yhi <junde@yhi.moe>
+# SPDX-License-Identifier: CC0-1.0
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=RiscFree IDE
+Comment=Ashling RiscFree IDE for Intel FPGAs
+Categories=Development;Electronics;
+# FIXME: find one
+Icon=applications-development
+Exec=
+Terminal=false
