@@ -9,13 +9,27 @@ This folder contains necessary files to re-pack the Quartus Prime Design Softwar
 
 Under the restrictions of [Intel Terms of Use](https://www.intel.com/content/www/us/en/legal/terms-of-use.html), the scripts (manifests) are unable to automatically download all the required files to finish the Flatpak building process. The built Flatpaks are not hosted in any repository either. You must obtain the software installer programs and build the Flatpak(s) by yourself. See <https://www.intel.com/content/www/us/en/software-kit/795187/intel-quartus-prime-lite-edition-design-software-version-23-1-for-linux.html> for all the download options available from Intel.
 
-_Read The Friendly Source Code_ to figure out the required files for building a Flatpak. Place the required file(s) under the same folder as the `.yml` manifest, then run:
+## Build
+
+Place the required file downloaded from the Intel website under the same folder as the `.yml` manifest; _Read The Friendly Source Code_ to figure out what is the required file. Then, run:
 
 ```sh
 flatpak-builder --force-clean --install --user build com.example.Manifest.yml
 ```
 
-Replace `com.example.Manifest.yml` with the name of manifest file describing the Flatpak you want. This should build the container and install it for the current user.
+Replace `com.example.Manifest.yml` with the name of the manifest file. This should build the container and install it for the current user.
+
+## Permissions
+
+By default, Quartus Prime Lite Edition (`com.intel.QuartusPrime.Lite`) is not given the permission to access any file or device on the host computer. You must explicitly enable them:
+
+```sh
+flatpak override --filesystem=host --device=all com.intel.QuartusPrime.Lite
+```
+
+For a full range of option that you can specify with the `flatpak override` command, refer to [flatpak-override(1)](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-override) manual page. Alternatively, you may want to use a GUI: [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal).
+
+The standalone Quartus Prime Programmer (`com.intel.QuartusPrime.Programmer`) is instead allowed to access all files (read-only) and devices on the host computer. This is to allow it to be usable out of the box.
 
 ## Includes
 
