@@ -47,9 +47,9 @@ The standalone Quartus Prime Programmer (`com.intel.QuartusPrime.Programmer`) is
   - Intel® Quartus® Prime Help: [`com.intel.QuartusPrime.Lite.Help`](./Lite/Help/com.intel.QuartusPrime.Lite.Help.yml)
 - Stand-Alone Software
   - Intel® Quartus® Prime Programmer and Tools: [`com.intel.QuartusPrime.Programmer`](./Programmer/com.intel.QuartusPrime.Programmer.yml)
-  - Ashling RiscFree IDE for Intel® FPGAs: `com.intel.QuartusPrime.RiscFree` (work in progress)
+  - Ashling RiscFree IDE for Intel® FPGAs: [`com.intel.QuartusPrime.RiscFree`](./RiscFree/com.intel.QuartusPrime.RiscFree.yml)
 
-All `com.intel.QuartusPrime.Lite.*` Flatpaks extends `com.intel.QuartusPrime.Lite`. `com.intel.QuartusPrime.Programmer` is packages separately as it's designed to be standalone.
+All `com.intel.QuartusPrime.Lite.*` Flatpaks extends `com.intel.QuartusPrime.Lite`. `com.intel.QuartusPrime.Programmer` and `com.intel.QuartusPrime.RiscFree` are packaged separately as they are designed to be standalone.
 
 ## License
 
