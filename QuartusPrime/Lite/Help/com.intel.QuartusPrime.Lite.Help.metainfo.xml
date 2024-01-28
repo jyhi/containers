@@ -8,6 +8,7 @@
   <id>com.intel.QuartusPrime.Lite.Help</id>
   <extends>com.intel.QuartusPrime.Lite</extends>
   <name>Help Resources for Quartus Prime Lite Edition</name>
+  <summary>Help Resources for Quartus Prime Lite Edition</summary>
   <categories>
     <category>Development</category>
     <category>Electronics</category>

@@ -7,7 +7,8 @@
 <component type="addon">
   <id>com.intel.QuartusPrime.Lite.Questa.Starter</id>
   <extends>com.intel.QuartusPrime.Lite</extends>
-  <name>Siemens EDA Questa Core for Intel FPGAs</name>
+  <name>Questa - Intel FPGA Starter Edition</name>
+  <summary>Siemens EDA Questa Core Simulator for Intel FPGAs</summary>
   <categories>
     <category>Development</category>
     <category>Electronics</category>

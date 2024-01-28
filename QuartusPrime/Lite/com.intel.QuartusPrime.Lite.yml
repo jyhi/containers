@@ -15,7 +15,7 @@ add-extensions:
     # the device support appears in the right place.
     directory: opt/intelFPGA_lite/23.1std/quartus/common/devinfo/.flatpak
     subdirectories: true
-    no-autodownload: false
+    no-autodownload: true
     autodelete: true
   com.intel.QuartusPrime.Lite.Help:
     directory: opt/intelFPGA_lite/23.1std/quartus/common/help
@@ -23,10 +23,6 @@ add-extensions:
     autodelete: true
   com.intel.QuartusPrime.Lite.Questa.Starter:
     directory: opt/intelFPGA_lite/23.1std/questa_fse
-    no-autodownload: false
-    autodelete: true
-  com.intel.QuartusPrime.RiscFree:
-    directory: opt/intelFPGA_lite/23.1std/riscfree
     no-autodownload: false
     autodelete: true
 finish-args:

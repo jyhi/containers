@@ -7,7 +7,7 @@
 <component type="desktop-application">
   <id>com.intel.QuartusPrime.Programmer</id>
   <name>Quartus Prime Programmer</name>
-  <summary>Stand-Alone Intel Quartus Prime Programmer</summary>
+  <summary>Stand-alone Programmer for Intel FPGAs</summary>
   <categories>
     <category>Development</category>
     <category>Electronics</category>

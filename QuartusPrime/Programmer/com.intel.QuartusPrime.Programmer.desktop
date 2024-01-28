@@ -5,7 +5,7 @@
 Version=1.0
 Type=Application
 Name=Quartus Prime Programmer
-Comment=Stand-Alone Intel Quartus Prime Programmer
+Comment=Stand-alone Programmer for Intel FPGAs
 Categories=Development;Electronics;
 Icon=com.intel.QuartusPrime.Programmer
 Exec=
