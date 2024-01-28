@@ -49,7 +49,7 @@ modules:
   - name: app-etc-ld.so.conf
     buildsystem: simple
     build-commands:
-      - install -Dm644 ld.so.conf /app/etc/ld.so.conf
+      - cp ld.so.conf /app/etc/ld.so.conf
     sources:
       - type: inline
         dest-filename: ld.so.conf
@@ -63,7 +63,7 @@ modules:
       - chmod u+x QuartusLiteSetup-23.1std.0.991-linux.run
       - ./QuartusLiteSetup-23.1std.0.991-linux.run --mode unattended --disable-components quartus_help,devinfo,arria_lite,cyclone,cyclone10lp,cyclonev,max,max10,quartus_update,riscfree,questa_fse,questa_fe --installdir /app/opt/intelFPGA_lite/23.1std --product_copy_name Flatpak --accept_eula 1
       # Fix permissions of the extracted files and folders to allow the build process to carry on...
-      - chmod --recursive u+w,g-s /app/opt/intelFPGA_lite
+      - chmod -R u+w,g-s /app/opt/intelFPGA_lite
     sources:
       - type: file
         path: QuartusLiteSetup-23.1std.0.991-linux.run

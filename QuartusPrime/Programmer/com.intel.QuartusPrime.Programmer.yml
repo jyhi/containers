@@ -29,7 +29,7 @@ modules:
   - name: app-etc-ld.so.conf
     buildsystem: simple
     build-commands:
-      - install -Dm644 ld.so.conf /app/etc/ld.so.conf
+      - cp ld.so.conf /app/etc/ld.so.conf
     sources:
       - type: inline
         dest-filename: ld.so.conf
@@ -43,7 +43,7 @@ modules:
       - chmod u+x QuartusProgrammerSetup-23.1std.0.991-linux.run
       - ./QuartusProgrammerSetup-23.1std.0.991-linux.run --mode unattended --installdir /app/opt/intelFPGA/23.1std --product_copy_name Flatpak --accept_eula 1
       # Fix permissions of the extracted files and folders to allow the build process to carry on...
-      - chmod --recursive u+w,g-s /app/opt/intelFPGA
+      - chmod -R u+w,g-s /app/opt/intelFPGA
     sources:
       - type: file
         path: QuartusProgrammerSetup-23.1std.0.991-linux.run
@@ -56,7 +56,7 @@ modules:
   - name: post-install
     buildsystem: simple
     build-commands:
-      # Remove unnecessary files. This however creates an extra dialog during application startup.
+      # Remove unnecessary files.
       - rm -fr /app/opt/intelFPGA/23.1std/{logs,uninstall}
       # Add AppStream data, application icon, and desktop entry.
       - mkdir -p /app/share/metainfo
