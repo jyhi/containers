@@ -82,7 +82,6 @@ modules:
       - mkdir -p /app/opt/intelFPGA_lite/23.1std/quartus/common/devinfo/.flatpak
       - mkdir -p /app/opt/intelFPGA_lite/23.1std/quartus/common/help
       - mkdir -p /app/opt/intelFPGA_lite/23.1std/questa_fse
-      - mkdir -p /app/opt/intelFPGA_lite/23.1std/riscfree
       # For device support, set up soft links pointing to the subdirectories.
       - ln -s .flatpak/ArriaLite/arriaii /app/opt/intelFPGA_lite/23.1std/quartus/common/devinfo/arriaii
       - ln -s .flatpak/Cyclone10LP/cyclone10lp /app/opt/intelFPGA_lite/23.1std/quartus/common/devinfo/cyclone10lp
