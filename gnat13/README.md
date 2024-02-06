@@ -1,5 +1,5 @@
 <!--
-  SPDX-FileCopyrightText: 2023-2024 Junde Yhi <junde@yhi.moe>
+  SPDX-FileCopyrightText: 2024 Junde Yhi <junde@yhi.moe>
   SPDX-License-Identifier: CC0-1.0
 -->
 
@@ -9,7 +9,8 @@ This folder contains necessary files to repack an GNAT-based Ada development env
 
 ## Includes
 
-- GNAT-FSF (GCC)
+- GNAT-FSF (GCC/Ada)
+- GNATprove (SPARK)
 - GPRbuild
 - Alire (`alr`)
 
