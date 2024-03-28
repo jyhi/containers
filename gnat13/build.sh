@@ -1,4 +1,9 @@
 #!/bin/sh
+#
+# Makefile, but shell script.
+#
+# SPDX-FileCopyrightText: 2024 Junde Yhi <junde@yhi.moe>
+# SPDX-License-Identifier: CC0-1.0
 
 help() {
   printf 'Usage: %s [flatpak|docker|podman|all]\n' "$0"
