@@ -6,7 +6,7 @@ DOCKER ?= docker
 
 FLATPAK_ID = org.freedesktop.Sdk.Extension.gnat14
 DOCKER_TAG = freedesktop.org/sdk/gnat14:23.08
-DOCKER_FN = freedesktop.org.sdk_gnat14_23.08.tar
+DOCKER_FN = freedesktop.org_sdk_gnat14_23.08.tar
 
 .PHONY: all flatpak docker check check-flatpak dist clean clean-flatpak \
 	clean-docker distclean
@@ -17,7 +17,7 @@ flatpak: .flatpak.built
 
 docker: .docker.built
 
-check: check-flatpak
+check: .flatpak.built check-flatpak
 
 check-flatpak: check-manifest check-metadata check-repo check-builddir
 
@@ -64,6 +64,6 @@ distclean: clean
     build $(FLATPAK_ID).yml
 	touch $@
 
-.docker.built: Dockerfile
+.docker.built: Dockerfile .flatpak.built
 	$(DOCKER) build . -t $(DOCKER_TAG)
 	touch $@
