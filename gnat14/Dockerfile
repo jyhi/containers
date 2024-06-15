@@ -11,4 +11,4 @@ COPY build/files /usr/lib/sdk/gnat14
 LABEL org.opencontainers.image.title="GNAT 14" \
 org.opencontainers.image.description="GNU Ada/SPARK compiler and build environment" \
 org.opencontainers.image.licenses="GPL-3.0-or-later" \
-org.opencontainers.image.version="14.1.0-2+docker.1"
+org.opencontainers.image.version="14.1.0-3+docker.1"
