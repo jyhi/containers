@@ -1,9 +1,5 @@
-<!--
-  SPDX-FileCopyrightText: 2024 Junde Yhi <junde@yhi.moe>
-  SPDX-License-Identifier: CC0-1.0
--->
-
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2024 Junde Yhi <junde@yhi.moe> -->
 <component type="desktop-application">
   <id>com.intel.QuartusPrime.Lite</id>
   <name>Quartus Prime Lite Edition</name>
@@ -53,3 +49,5 @@
     </release>
   </releases>
 </component>
+
+<!-- SPDX-License-Identifier: CC0-1.0 -->

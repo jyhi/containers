@@ -1,9 +1,5 @@
-<!--
-  SPDX-FileCopyrightText: 2024 Junde Yhi <junde@yhi.moe>
-  SPDX-License-Identifier: CC0-1.0
--->
-
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2024 Junde Yhi <junde@yhi.moe> -->
 <component type="addon">
   <id>com.intel.QuartusPrime.Lite.Device.Cyclone10LP</id>
   <extends>com.intel.QuartusPrime.Lite</extends>
@@ -24,3 +20,5 @@
     </release>
   </releases>
 </component>
+
+<!-- SPDX-License-Identifier: CC0-1.0 -->
