@@ -51,6 +51,7 @@ modules:
   - name: app-etc-ld.so.conf
     buildsystem: simple
     build-commands:
+      - mkdir -p /app/etc
       - cp ld.so.conf /app/etc/ld.so.conf
     sources:
       - type: inline
