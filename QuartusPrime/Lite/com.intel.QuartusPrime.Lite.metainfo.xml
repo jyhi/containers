@@ -32,18 +32,21 @@
     <id>com.intel.QuartusPrime.Programmer</id>
   </provides>
   <recommends>
-    <id version="23.1" compare="eq">com.intel.QuartusPrime.Lite.Questa.Starter</id>
-    <id version="23.1" compare="eq">com.intel.QuartusPrime.Lite.Help</id>
+    <id version="23.1.1" compare="eq">com.intel.QuartusPrime.Lite.Questa.Starter</id>
+    <id version="23.1.1" compare="eq">com.intel.QuartusPrime.Lite.Help</id>
   </recommends>
   <supports>
-    <id version="23.1" compare="eq">com.intel.QuartusPrime.Lite.Device.ArriaLite</id>
-    <id version="23.1" compare="eq">com.intel.QuartusPrime.Lite.Device.Cyclone</id>
-    <id version="23.1" compare="eq">com.intel.QuartusPrime.Lite.Device.Cyclone10LP</id>
-    <id version="23.1" compare="eq">com.intel.QuartusPrime.Lite.Device.CycloneV</id>
-    <id version="23.1" compare="eq">com.intel.QuartusPrime.Lite.Device.Max</id>
-    <id version="23.1" compare="eq">com.intel.QuartusPrime.Lite.Device.Max10</id>
+    <id version="23.1.1" compare="eq">com.intel.QuartusPrime.Lite.Device.ArriaLite</id>
+    <id version="23.1.1" compare="eq">com.intel.QuartusPrime.Lite.Device.Cyclone</id>
+    <id version="23.1.1" compare="eq">com.intel.QuartusPrime.Lite.Device.Cyclone10LP</id>
+    <id version="23.1.1" compare="eq">com.intel.QuartusPrime.Lite.Device.CycloneV</id>
+    <id version="23.1.1" compare="eq">com.intel.QuartusPrime.Lite.Device.Max</id>
+    <id version="23.1.1" compare="eq">com.intel.QuartusPrime.Lite.Device.Max10</id>
   </supports>
   <releases>
+    <release version="23.1.1" date="2024-06-14">
+      <url>https://www.intel.com/content/www/us/en/software-kit/825277/intel-quartus-prime-lite-edition-design-software-version-23-1-1-for-linux.html</url>
+    </release>
     <release version="23.1" date="2023-12-11">
       <url>https://www.intel.com/content/www/us/en/software-kit/795187/intel-quartus-prime-lite-edition-design-software-version-23-1-for-linux.html</url>
     </release>

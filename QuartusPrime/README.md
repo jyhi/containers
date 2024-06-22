@@ -3,11 +3,11 @@
   SPDX-License-Identifier: CC0-1.0
 -->
 
-# Intel® Quartus® Prime Lite Edition Design Software Version 23.1 for Linux (Flatpak)
+# Intel® Quartus® Prime Lite Edition Design Software Version 23.1.1 for Linux (Flatpak)
 
 This folder contains necessary files to re-pack the Quartus Prime Design Software (Lite Edition) into Flatpak containers.
 
-Under the restrictions of [Intel Terms of Use](https://www.intel.com/content/www/us/en/legal/terms-of-use.html), the scripts (manifests) are unable to automatically download all the required files to finish the Flatpak building process. The built Flatpaks are not hosted in any repository either. You must obtain the software installer programs and build the Flatpak(s) by yourself. See <https://www.intel.com/content/www/us/en/software-kit/795187/intel-quartus-prime-lite-edition-design-software-version-23-1-for-linux.html> for all the download options available from Intel.
+Under the restrictions of [Intel Terms of Use](https://www.intel.com/content/www/us/en/legal/terms-of-use.html), the scripts (manifests) are unable to automatically download all the required files to finish the Flatpak building process. The built Flatpaks are not hosted in any repository either. You must obtain the software installer programs and build the Flatpak(s) by yourself. See <https://www.intel.com/content/www/us/en/software-kit/825277/intel-quartus-prime-lite-edition-design-software-version-23-1-1-for-linux.html> for all the download options available from Intel.
 
 ## Build
 
@@ -58,7 +58,7 @@ The metadata files included in this repository are public domain work under the 
 The Intel® Quartus® Prime software is a proprietary software licensed under the Quartus Prime and Intel FPGA IP License Agreement. You can obtain a copy of the license text by extracting it from the Quartus Prime installer:
 
 ```sh
-./QuartusLiteSetup-23.1std.0.991-linux.run --install_lic ./intelFPGA_lite/23.1std
+./QuartusLiteSetup-23.1std.1.993-linux.run --install_lic ./intelFPGA_lite/23.1std
 ```
 
 This will place all the license documents under the `./intelFPGA_lite/23.1std/licenses` directory.

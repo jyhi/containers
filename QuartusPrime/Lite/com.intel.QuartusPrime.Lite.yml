@@ -63,17 +63,17 @@ modules:
   - name: quartus-prime-lite
     buildsystem: simple
     build-commands:
-      - chmod u+x QuartusLiteSetup-23.1std.0.991-linux.run
-      - ./QuartusLiteSetup-23.1std.0.991-linux.run --mode unattended --disable-components quartus_help,devinfo,arria_lite,cyclone,cyclone10lp,cyclonev,max,max10,quartus_update,riscfree,questa_fse,questa_fe --installdir /app/opt/intelFPGA_lite/23.1std --product_copy_name Flatpak --accept_eula 1
+      - chmod u+x QuartusLiteSetup-23.1std.1.993-linux.run
+      - ./QuartusLiteSetup-23.1std.1.993-linux.run --mode unattended --disable-components quartus_help,devinfo,arria_lite,cyclone,cyclone10lp,cyclonev,max,max10,quartus_update,riscfree,questa_fse,questa_fe --installdir /app/opt/intelFPGA_lite/23.1std --product_copy_name Flatpak --accept_eula 1
       # Fix permissions of the extracted files and folders to allow the build process to carry on...
       - chmod -R u+w,g-s /app/opt/intelFPGA_lite
     sources:
       - type: file
-        path: QuartusLiteSetup-23.1std.0.991-linux.run
+        path: QuartusLiteSetup-23.1std.1.993-linux.run
         # SHA-1 is taken from the Intel website; SHA-256 is provided as well. However, flatpak-builder doesn't check a
         # locally provided file anyway, so they're only for reference.
-        sha1: 7f8cc416092710c47270ef1550a0d0bc2bfb7a10
-        sha256: 10a5dfe96433b66562ffae352f1bd274a5f24dd2fedfaddb3c80bc6cca6ae4d5
+        sha1: bbca0986c79ca4b367838fca31b061ed87bfe50e
+        sha256: 382a76859adfadfa759c04ae54d5a083cfce0d1ae5ebb489f9ce885aae5e5af6
 
   # Do various post-installation work. Separated from the last step because we want it to be kept cached.
   - name: post-install

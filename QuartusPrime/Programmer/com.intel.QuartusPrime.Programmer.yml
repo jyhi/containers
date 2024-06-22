@@ -42,17 +42,17 @@ modules:
   - name: quartus-prime-programmer
     buildsystem: simple
     build-commands:
-      - chmod u+x QuartusProgrammerSetup-23.1std.0.991-linux.run
-      - ./QuartusProgrammerSetup-23.1std.0.991-linux.run --mode unattended --installdir /app/opt/intelFPGA/23.1std --product_copy_name Flatpak --accept_eula 1
+      - chmod u+x QuartusProgrammerSetup-23.1std.1.993-linux.run
+      - ./QuartusProgrammerSetup-23.1std.1.993-linux.run --mode unattended --installdir /app/opt/intelFPGA/23.1std --product_copy_name Flatpak --accept_eula 1
       # Fix permissions of the extracted files and folders to allow the build process to carry on...
       - chmod -R u+w,g-s /app/opt/intelFPGA
     sources:
       - type: file
-        path: QuartusProgrammerSetup-23.1std.0.991-linux.run
+        path: QuartusProgrammerSetup-23.1std.1.993-linux.run
         # SHA-1 is taken from the Intel website; SHA-256 is provided as well. However, flatpak-builder doesn't check a
         # locally provided file anyway, so they're only for reference.
-        sha1: 4693b42567b1f67f28e90e406e52619431bfaa8d
-        sha256: c9fb352c9a1a4c15335b2676acfc4b978bc1847d54cfd88e93f749a48506bd59
+        sha1: e488e1084349db280bd32bd9aa54711067f13fa3
+        sha256: 1ec1e39a567729036661146385bdb3477e27b68189b37b5c290d80a5a93ffda2
 
   # Do various post-installation work. Separated from the last step because we want it to be kept cached.
   - name: post-install
