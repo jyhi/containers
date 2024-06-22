@@ -4,6 +4,7 @@
 id: com.intel.QuartusPrime.Lite
 runtime: org.freedesktop.Platform//23.08
 sdk: org.freedesktop.Sdk//23.08
+collection-id: com.intel.QuartusPrime
 add-extensions:
   com.intel.QuartusPrime.Lite.Device:
     # Note: devinfo has other files, so we cannot use it as an extension mount point. Device support packs can contain
