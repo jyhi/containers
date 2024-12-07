@@ -22,7 +22,6 @@
   </developer>
   <content_rating type="oars-1.0" />
   <url type="homepage">https://www.gnu.org/software/gnat</url>
-  <url type="bugtracker">https://github.com/flathub/org.freedesktop.Sdk.Extension.gnat14/issues</url>
   <url type="help">https://gcc.gnu.org/onlinedocs/gcc-14.1.0/gnat_ugn</url>
   <url type="vcs-browser">https://github.com/alire-project/GNAT-FSF-builds</url>
   <metadata_license>CC0-1.0</metadata_license>
