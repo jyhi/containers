@@ -22,12 +22,12 @@
   </developer>
   <content_rating type="oars-1.0" />
   <url type="homepage">https://www.gnu.org/software/gnat</url>
-  <url type="help">https://gcc.gnu.org/onlinedocs/gcc-14.1.0/gnat_ugn</url>
+  <url type="help">https://gcc.gnu.org/onlinedocs/gcc-14.2.0/gnat_ugn</url>
   <url type="vcs-browser">https://github.com/alire-project/GNAT-FSF-builds</url>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
   <releases>
-    <release version="14.2.0-1+flatpak.1" date="2024-11-05">
+    <release version="14.2.0-1+flatpak.1" date="2024-12-07">
       <description>
         <p>This release contains the following components:</p>
         <ul>
