@@ -68,17 +68,6 @@ flatpak run org.flatpak.Builder --force-clean --sandbox --user --install \
 
 So far the manifest simply downloads pre-built binaries from [alire-project/GNAT-FSF-builds](https://github.com/alire-project/GNAT-FSF-builds/releases) and [alire-project/alire](https://github.com/alire-project/alire/releases). Because there are only x86_64 builds, this extension is limited to x86_64.
 
-## Notes
-
-These guidelines apply to the metadata about the extension:
-
-- Flatpak Requirements \& Conventions: <https://docs.flatpak.org/en/latest/conventions.html>
-- Flatpak Extensions Guides: <https://docs.flatpak.org/en/latest/extension.html>
-- Flathub Requirements: <https://docs.flathub.org/docs/for-app-authors/requirements>
-- Flathub MetaInfo Guidelines: <https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines/>
-- Flathub Quality Guidelines: <https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines/quality-guidelines>
-- The AppStream Specification: <https://www.freedesktop.org/software/appstream/docs/>
-
 ## License
 
 The metadata files included in this folder are public domain work under the CC0 1.0 license. See [CC0-1.0.txt](./LICENSES/CC0-1.0.txt) for a copy of the license text.
