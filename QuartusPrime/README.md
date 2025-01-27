@@ -5,6 +5,9 @@
 
 # Intel® Quartus® Prime Lite Edition Design Software Version 23.1.1 for Linux (Flatpak)
 
+> [!CAUTION]
+> Files in this folder are obsolete. Newer versions of this project are at <https://github.com/jyhi/QuartusPrime-Flatpak>.
+
 This folder contains necessary files to re-pack the Quartus Prime Design Software (Lite Edition) into Flatpak containers.
 
 Under the restrictions of [Intel Terms of Use](https://www.intel.com/content/www/us/en/legal/terms-of-use.html), the scripts (manifests) are unable to automatically download all the required files to finish the Flatpak building process. The built Flatpaks are not hosted in any repository either. You must obtain the software installer programs and build the Flatpak(s) by yourself. See <https://www.intel.com/content/www/us/en/software-kit/825277/intel-quartus-prime-lite-edition-design-software-version-23-1-1-for-linux.html> for all the download options available from Intel.
