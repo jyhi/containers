@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Junde Yhi <junde@yhi.moe>
+# SPDX-License-Identifier: CC0-1.0
+
+FROM debian
+
+RUN apt-get update && \
+apt-get install -y gcc gdb valgrind make cmake ninja-build meson doxygen reuse && \
+rm -rf /var/lib/apt/lists/*
