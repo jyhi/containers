@@ -1,5 +1,5 @@
 # SPDX-FileCopyrightText: 2023 Junde Yhi <junde@yhi.moe>
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: CC0-1.0
 
 FROM debian
 
@@ -11,8 +11,3 @@ rm -rf /var/lib/apt/lists/*
 
 # Stop Alire from interactively asking for a selection of toolchain.
 RUN alr toolchain --disable-assistant
-
-LABEL \
-org.opencontainers.image.title="Ada on Debian" \
-org.opencontainers.image.description="Ada development environment on Debian." \
-org.opencontainers.image.authors="Junde Yhi <junde@yhi.moe>"
